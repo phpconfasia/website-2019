@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
     this.burgerOpened$
       .pipe(first())
       .subscribe((isBurgerOpen: boolean) => {
-        console.log(isBurgerOpen);
         if (isBurgerOpen) {
           this.closeBurger();
         } else {
