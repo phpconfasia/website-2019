@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +9,33 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent implements OnInit {
+  public burgerOpened$: BehaviorSubject<boolean>;
 
-  constructor() { }
+  constructor() {
+    this.burgerOpened$ = new BehaviorSubject<boolean>(false);
+  }
 
   ngOnInit() {
   }
 
+  public toggleBurger(): void {
+    this.burgerOpened$
+      .pipe(first())
+      .subscribe((isBurgerOpen: boolean) => {
+        console.log(isBurgerOpen);
+        if (isBurgerOpen) {
+          this.closeBurger();
+        } else {
+          this.openBurger();
+        }
+      });
+  }
+
+  private openBurger(): void {
+    this.burgerOpened$.next(true);
+  }
+
+  private closeBurger(): void {
+    this.burgerOpened$.next(false);
+  }
 }
