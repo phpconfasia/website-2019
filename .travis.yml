@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+
+cache:
+  directories:
+  - "node_modules"
+
+install:
+- sudo apt-get update
+- npm install -g @angular/cli
+- npm install
+
+script:
+- ng build --prod --base-href "/website-2019/"
+- npx angular-cli-ghpages --dir=dist/phpconf2019
