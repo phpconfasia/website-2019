@@ -19,15 +19,15 @@ export class NavbarComponent implements OnInit {
     this.navbarUrls = [
       {
         name: 'Home',
-        url: '/home'
+        url: '/'
       },
       {
         name: 'Schedule',
         url: '/schedule'
       },
       {
-        name: 'Pricing',
-        url: '/pricing'
+        name: 'Tickets',
+        url: '/tickets'
       },
       {
         name: 'Sponsor Us',
