@@ -1,5 +1,4 @@
-@import "../../assets/sass/theme/colors"
-@import "../../../node_modules/bulma/sass/utilities/mixins"
+@import "../../styles"
 
 #intro
   min-height: 100vh
@@ -7,7 +6,7 @@
   margin: 0
   padding-top: 60px
   text-align: center
-  background-color: $primary-color
+  background-color: $primary
   color: $white
   #intro-main
     padding-top: 200px
@@ -17,7 +16,7 @@
       text-transform: uppercase
     +tablet
       #intro-buttons
-        .is-primary
+        .is-link
           float: right
         .is-info
           float: left
@@ -26,7 +25,7 @@
   #intro
     #intro-sub
       #intro-buttons
-      .is-primary
+      .is-link
         float: none
       .is-info
         float: none
