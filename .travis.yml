@@ -12,5 +12,5 @@ install:
 - npm install
 
 script:
-- ng build --prod --base-href "/website-2019/"
+- ng build --prod
 - npx angular-cli-ghpages --dir=dist/phpconf2019 --cname=2019.phpconf.asia --name="Huiren Woo" --email=giantcrabby@gmail.com
