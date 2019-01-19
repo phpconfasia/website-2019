@@ -13,4 +13,4 @@ install:
 
 script:
 - ng build --prod
-- npx angular-cli-ghpages --repo=https://GH_TOKEN@github.com/phpconfasia/website-2019.git --dir=dist/phpconf2019 --cname=2019.phpconf.asia --name="Huiren Woo" --email=giantcrabby@gmail.com
+- npx angular-cli-ghpages --dir=dist/phpconf2019 --cname=2019.phpconf.asia --repo="$GIT_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL"
