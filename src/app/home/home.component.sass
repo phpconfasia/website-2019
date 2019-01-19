@@ -1,12 +1,34 @@
 @import "../../assets/sass/theme/colors"
+@import "../../../node_modules/bulma/sass/utilities/mixins"
 
 #intro
-  height: 100vh
+  min-height: 100vh
   width: 100%
   margin: 0
   padding-top: 60px
   text-align: center
   background-color: $primary-color
   color: $white
-  h1
-    font-size: 48px
+  #intro-main
+    padding-top: 200px
+  #intro-sub
+    padding-top: 50vh
+    +tablet
+      #intro-buttons
+        .is-primary
+          float: right
+        .is-info
+          float: left
+
++mobile
+  #intro
+    #intro-sub
+      #intro-buttons
+      .is-primary
+        float: none
+      .is-info
+        float: none
+
+#framework-selection
+  .main-logo
+  .side-logo
