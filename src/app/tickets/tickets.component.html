@@ -1,1 +1,29 @@
 <app-header title="Tickets"></app-header>
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column" *ngFor="let ticket of this.tickets">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              {{ticket.price | currency}}
+            </p>
+            <p class="subtitle">
+              {{ticket.title}}
+            </p>
+            <div>
+              {{ticket.description}}
+            </div>
+            <div>
+              Full access to conference
+            </div>
+            <div>
+              Meals included
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
