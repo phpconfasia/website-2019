@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {Ticket} from './ticket';
 
 @Component({
   selector: 'app-tickets',
@@ -7,7 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TicketsComponent implements OnInit {
-  public tickets;
+  public tickets: Ticket[];
 
   constructor() {
     this.tickets = [
