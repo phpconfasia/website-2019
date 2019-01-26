@@ -13,18 +13,21 @@ export class TicketsComponent implements OnInit {
   constructor() {
     this.tickets = [
       {
+        imageUrl: '/assets/img/student.svg',
         title: 'STUDENT',
         price: 49.00,
         description: 'For students & NSFs',
         url: ''
       },
       {
+        imageUrl: '/assets/img/dove.svg',
         title: 'EARLY BIRD',
         price: 249.00,
         description: 'For folks who buy it early',
         url: ''
       },
       {
+        imageUrl: '/assets/img/robot.svg',
         title: 'REGULAR',
         price: 349.00,
         description: 'For folks who buy it just on time',
