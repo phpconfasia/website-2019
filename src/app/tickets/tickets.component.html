@@ -4,7 +4,7 @@
     <div class="columns">
       <div class="column" *ngFor="let ticket of this.tickets">
         <div class="card">
-          <div class="card-content">
+          <div class="card-content has-text-centered">
             <figure class="image is-1by1">
               <img [src]="ticket.imageUrl" />
             </figure>
@@ -14,15 +14,11 @@
             <p class="subtitle">
               {{ticket.title}}
             </p>
-            <div>
-              {{ticket.description}}
-            </div>
-            <div>
-              Full access to conference
-            </div>
-            <div>
-              Meals included
-            </div>
+            <ul class="pricing">
+              <li>{{ticket.description}}</li>
+              <li>Full access to conference</li>
+              <li>Meals included</li>
+            </ul>
           </div>
         </div>
       </div>
