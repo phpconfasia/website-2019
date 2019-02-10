@@ -20,22 +20,6 @@ export class NavbarComponent implements OnInit {
       {
         name: 'Home',
         url: '/'
-      },
-      {
-        name: 'Schedule',
-        url: '/schedule'
-      },
-      {
-        name: 'Tickets',
-        url: '/tickets'
-      },
-      {
-        name: 'Sponsor Us',
-        url: '/sponsor-us'
-      },
-      {
-        name: 'Contact',
-        url: '/contact'
       }
     ];
   }
