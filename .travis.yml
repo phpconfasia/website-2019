@@ -1,16 +1,22 @@
 language: node_js
 node_js:
-- node
+  - node
 
 cache:
   directories:
-  - "node_modules"
+    - "node_modules"
 
 install:
-- sudo apt-get update
-- npm install -g @angular/cli
-- npm install
+  - sudo apt-get update
+  - npm install -g @angular/cli
+  - npm install
 
 script:
-- ng build --prod
-- npx angular-cli-ghpages --dir=dist/phpconf2019 --cname=2019.phpconf.asia --repo="$GIT_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL"
+  - ng build --prod
+
+deploy:
+  - provider: script
+    script: npx angular-cli-ghpages --dir=dist/phpconf2019 --cname=2019.phpconf.asia --repo="$GIT_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL"
+    skip_cleanup: true
+    on:
+      branch: master
