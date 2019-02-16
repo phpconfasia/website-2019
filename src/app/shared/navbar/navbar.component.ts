@@ -2,6 +2,7 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {first} from 'rxjs/operators';
 import {NavbarUrl} from './navbar-url';
+import {navbarUrls} from './navbar-urls';
 
 @Component({
   selector: 'app-navbar',
@@ -11,17 +12,10 @@ import {NavbarUrl} from './navbar-url';
 })
 export class NavbarComponent implements OnInit {
   public burgerOpened$: BehaviorSubject<boolean>;
-  public navbarUrls: NavbarUrl[];
+  public navbarUrls: NavbarUrl[] = navbarUrls;
 
   constructor() {
     this.burgerOpened$ = new BehaviorSubject<boolean>(false);
-
-    this.navbarUrls = [
-      {
-        name: 'Home',
-        url: '/'
-      }
-    ];
   }
 
   ngOnInit() {
