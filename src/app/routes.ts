@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
-import {TicketsComponent} from './tickets/tickets.component';
+import {SponsorsComponent} from './sponsors/sponsors.component';
 import {CodeOfConductComponent} from './code-of-conduct/code-of-conduct.component';
 import {VenueComponent} from './venue/venue.component';
 
@@ -15,10 +15,10 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'tickets',
-    component: TicketsComponent,
+    path: 'sponsors',
+    component: SponsorsComponent,
     data: {
-      title: 'Tickets | PHPConfAsia 2019',
+      title: 'Sponsors | PHPConfAsia 2019',
       description: 'Welcome to PHPConfAsia 2019! Our theme for this year is Framework Wars!'
     }
   },

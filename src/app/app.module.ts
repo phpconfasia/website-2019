@@ -5,15 +5,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
-import {TicketsComponent} from './tickets/tickets.component';
-import { CodeOfConductComponent } from './code-of-conduct/code-of-conduct.component';
-import { VenueComponent } from './venue/venue.component';
+import {SponsorsComponent} from './sponsors/sponsors.component';
+import {CodeOfConductComponent} from './code-of-conduct/code-of-conduct.component';
+import {VenueComponent} from './venue/venue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TicketsComponent,
+    SponsorsComponent,
     CodeOfConductComponent,
     VenueComponent
   ],

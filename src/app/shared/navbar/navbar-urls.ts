@@ -6,6 +6,10 @@ export const navbarUrls: NavbarUrl[] = [
     url: '/'
   },
   {
+    name: 'Sponsors',
+    url: '/sponsors'
+  },
+  {
     name: 'Venue',
     url: '/venue'
   },
