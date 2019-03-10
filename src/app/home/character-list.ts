@@ -10,7 +10,7 @@ export const characterList: Character[] = [
     },
     {
         name: 'Zend',
-        description: 'An armed rifle symbolizing enterprise and their riches.',
+        description: 'An enterprise framework. An armed rifle symbolizing corporations and their riches.',
         characterAvatar: '/assets/img/characters/soldier-avatar.svg',
         characterImg: '/assets/img/characters/soldier.svg',
         characterBg: '/assets/img/characters/soldier-bg.svg'
