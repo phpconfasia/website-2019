@@ -1,16 +1,7 @@
 <div id="intro">
   <div id="intro-characters">
-    <div class="character-info warrior">
-      <img src="../../assets/img/characters/warrior.svg" alt="Warrior mascot">
-    </div>
-    <div class="character-info soldier">
-      <img src="../../assets/img/characters/soldier.svg" alt="Soldier mascot">
-    </div>
-    <div class="character-info bard">
-      <img src="../../assets/img/characters/bard.svg" alt="Bard mascot">
-    </div>
-    <div class="character-info ninja">
-      <img src="../../assets/img/characters/ninja.svg" alt="Ninja mascot">
+    <div class="character-info" *ngFor="let character of characterList" [style.background-image]="'url(' + character.characterBg + ')'">
+      <img [src]="character.characterImg" [alt]="character.name">
     </div>
   </div>
   <div id="intro-info">

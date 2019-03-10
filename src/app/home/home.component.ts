@@ -11,17 +11,18 @@ import {characterList} from './character-list';
 })
 export class HomeComponent implements OnInit {
   public chosenCharacter$: BehaviorSubject<Character>;
+  public characterList: Character[] = characterList;
 
   constructor() {
-    this.chosenCharacter$ = new BehaviorSubject<Character>(characterList[0]);
+    this.chosenCharacter$ = new BehaviorSubject<Character>(this.characterList[0]);
   }
 
   ngOnInit() {
   }
 
   public selectCharacter(selectedIndex: number): void {
-    if(selectedIndex >= 0 && selectedIndex < characterList.length) {
-      this.chosenCharacter$.next(characterList[selectedIndex]);
+    if(selectedIndex >= 0 && selectedIndex < this.characterList.length) {
+      this.chosenCharacter$.next(this.characterList[selectedIndex]);
     }
   }
 }
