@@ -1,6 +1,7 @@
 <div id="intro">
   <div id="intro-characters">
-    <div class="character-info" *ngFor="let character of characterList" [style.background-image]="'url(' + character.characterBg + ')'">
+    <div class="character-info" *ngFor="let character of characterList"
+         [style.background-image]="'url(' + character.characterBg + ')'">
       <img [src]="character.characterImg" [alt]="character.name">
     </div>
   </div>
@@ -31,6 +32,38 @@
             <a href="https://cfp.phpconf.asia/" class="button is-rounded is-danger" target="_blank"
                rel="noopener noreferrer">Submit CFP</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="framework-class">
+  <div class="columns is-desktop">
+    <ng-container *ngIf="(selectedCharacter$ | async) as selectedCharacter">
+      <div id="framework-display" class="column"
+           [style.background-image]="'url(' + selectedCharacter.characterBg + ')'">
+        <figure class="image">
+          <img [src]="selectedCharacter.characterImg" [alt]="selectedCharacter.name">
+        </figure>
+      </div>
+    </ng-container>
+
+    <div id="framework-selector" class="column">
+      <div class="content is-medium has-text-centered">
+        <h2 class="title is-uppercase">Which side are you on?</h2>
+        <ng-container *ngIf="(selectedCharacter$ | async) as selectedCharacter">
+          <h3 class="title">{{selectedCharacter.name}}</h3>
+          <p>{{selectedCharacter.description}}</p>
+        </ng-container>
+      </div>
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-half-mobile is-half-desktop" *ngFor="let character of characterList; let i = index">
+          <a (click)="selectCharacter(i)">
+            <figure class="image">
+              <img class="character-avatar is-rounded" [src]="character.characterAvatar" [alt]="character.name">
+            </figure>
+            <p class="has-text-centered">{{character.name}}</p>
+          </a>
         </div>
       </div>
     </div>

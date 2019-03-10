@@ -47,17 +47,36 @@
         padding: 40px
 
 #framework-class
-  padding: 40px 0
+  padding: 0
   width: 100%
   min-height: 512px
   margin: 0
+  .columns
+    margin: 0
+    padding: 0
+    .column
+      margin: 0
   #framework-display
-    display: inline-block
-    width: 50%
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    img
+      max-height: 576px
   #framework-selector
-    display: inline-block
-    background-color: #FFF
-    width: 50%
+    padding: 20px
+    background-color: $dark
+    h2, h3, p
+      color: $white
+    a
+      img.character-avatar
+        transition-property: background-color
+        transition-duration: 0.4s
+        background-color: $grey-dark
+        padding: 10px
+        height: 128px
+    a:hover
+      img.character-avatar
+        background-color: $white
 
 +tablet-only
   #intro
