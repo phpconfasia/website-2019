@@ -1,10 +1,11 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://2019.phpconf.asia/">
-      <img src="../../../assets/img/phpconfasia-banner.png">
+    <a class="navbar-item" routerLink="/">
+      <img src="../../../assets/img/phpconfasia-banner.png" alt="PHPConfiAsia 2019 banner"/>
     </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic" (click)="toggleBurger()" [ngClass]="{'is-active': burgerOpened$ | async}">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
+       (click)="toggleBurger()" [ngClass]="{'is-active': burgerOpened$ | async}">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -16,11 +17,9 @@
       <a [routerLink]="navUrl.url" class="navbar-item" *ngFor="let navUrl of this.navbarUrls">
         {{navUrl.name}}
       </a>
-
       <a href="https://phpconfasia2019.codecraft.com.sg/" class="navbar-item">
         Tickets
       </a>
-
       <a href="https://2018.phpconf.asia" class="navbar-item">
         2018
       </a>
