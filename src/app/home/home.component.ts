@@ -2,6 +2,8 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {Character} from './character';
 import {characterList} from './character-list';
+import {Sponsor} from './sponsor';
+import {sponsorList} from './sponsor-list';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +14,7 @@ import {characterList} from './character-list';
 export class HomeComponent implements OnInit {
   public selectedCharacter$: BehaviorSubject<Character>;
   public characterList: Character[] = characterList;
+  public sponsorList: { [rank: string]: Sponsor[] } = sponsorList;
 
   constructor() {
     this.selectedCharacter$ = new BehaviorSubject<Character>(this.characterList[0]);

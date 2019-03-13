@@ -80,3 +80,81 @@
     </div>
   </div>
 </div>
+<section id="sponsors" class="section">
+  <div class="container has-text-centered">
+    <div class="columns">
+      <div class="column">
+        <h2 class="title is-2">Sponsors</h2>
+        <h4 class="subtitle is-4">Check out our amazing sponsors for this year's war</h4>
+      </div>
+    </div>
+    <div class="columns" *ngIf="sponsorList['gold'].length">
+      <div class="column">
+        <h3 class="title is-3">Gold</h3>
+      </div>
+    </div>
+    <div class="columns" *ngFor="let goldSponsor of sponsorList['gold']">
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img [src]="goldSponsor.imgUrl" [alt]="goldSponsor.name"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">{{goldSponsor.name}}</p>
+            <p class="subtitle is-6">{{goldSponsor.sponsorTitle}}</p>
+            <div class="content">
+              {{goldSponsor.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns" *ngIf="sponsorList['silver'].length">
+      <div class="column">
+        <h3 class="title is-3">Silver</h3>
+      </div>
+    </div>
+    <div class="columns" *ngFor="let silverSponsor of sponsorList['silver']">
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img [src]="silverSponsor.imgUrl" [alt]="silverSponsor.name"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">{{silverSponsor.name}}</p>
+            <p class="subtitle is-6">{{silverSponsor.sponsorTitle}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns" *ngIf="sponsorList['supporter'].length">
+      <div class="column">
+        <h3 class="title is-3">Supporter</h3>
+      </div>
+    </div>
+    <div class="columns" *ngFor="let supporterSponsor of sponsorList['supporter']">
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img [src]="supporterSponsor.imgUrl" [alt]="supporterSponsor.name"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">{{supporterSponsor.name}}</p>
+            <p class="subtitle is-6">{{supporterSponsor.sponsorTitle}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <a routerLink="/sponsors" class="button is-rounded is-danger">Sponsor Us</a>
+      </div>
+    </div>
+  </div>
+</section>
