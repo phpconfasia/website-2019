@@ -8,7 +8,7 @@ export const organizers: Organizer[] = [
   },
   {
     name: 'Zion Ng',
-    title: 'Consultant @ iVideoSmart',
+    title: 'Freelance Web/Mobile Developer',
     imgUrl: 'assets/img/organizers/zion-ng.jpg',
   },
   {
