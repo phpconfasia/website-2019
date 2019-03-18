@@ -8,7 +8,8 @@ import {HomeComponent} from './home/home.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {CodeOfConductComponent} from './code-of-conduct/code-of-conduct.component';
 import {VenueComponent} from './venue/venue.component';
-import { OrganizersComponent } from './organizers/organizers.component';
+import {OrganizersComponent} from './organizers/organizers.component';
+import {ScheduleComponent} from './home/schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { OrganizersComponent } from './organizers/organizers.component';
     SponsorsComponent,
     CodeOfConductComponent,
     VenueComponent,
-    OrganizersComponent
+    OrganizersComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
