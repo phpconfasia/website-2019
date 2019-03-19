@@ -40,7 +40,7 @@
                 <img [src]="dayOneEvent.imgUrl" [alt]="dayOneEvent.title">
               </figure>
               <p class="heading is-3" *ngIf="dayOneEvent.author">
-                <a [href]="dayOneEvent.authorUrl">{{dayOneEvent.author}}</a>
+                <a [href]="dayOneEvent.author.profileUrl">{{dayOneEvent.author.name}}</a>
               </p>
               <p>{{dayOneEvent.description}}</p>
             </div>
@@ -67,7 +67,7 @@
                 <img [src]="dayTwoEvent.imgUrl" [alt]="dayTwoEvent.title">
               </figure>
               <p class="heading is-3" *ngIf="dayTwoEvent.author">
-                <a [href]="dayTwoEvent.authorUrl">{{dayTwoEvent.author}}</a>
+                <a [href]="dayTwoEvent.author.profileUrl">{{dayTwoEvent.author.name}}</a>
               </p>
               <p>{{dayTwoEvent.description}}</p>
             </div>
