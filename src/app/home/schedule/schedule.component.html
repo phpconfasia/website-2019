@@ -33,11 +33,15 @@
           <div class="timeline-item is-medium is-danger" *ngFor="let dayOneEvent of dayOneEventList">
             <div class="timeline-marker is-danger"></div>
             <div class="timeline-content">
-              <p class="heading is-1">{{dayOneEvent.title}} | {{dayOneEvent.dateTime | date:'shortTime'}}</p>
-              <figure class="image is-128x128">
+              <p class="heading is-1">{{dayOneEvent.title}} | {{dayOneEvent.dateTime | date:'shortTime'}}
+                <span *ngIf="dayOneEvent.dateTimeEnd"> - {{dayOneEvent.dateTimeEnd | date:'shortTime'}}</span>
+              </p>
+              <figure class="image is-128x128" *ngIf="dayOneEvent.imgUrl">
                 <img [src]="dayOneEvent.imgUrl" [alt]="dayOneEvent.title">
               </figure>
-              <p class="heading is-3">{{dayOneEvent.author}}</p>
+              <p class="heading is-3" *ngIf="dayOneEvent.author">
+                <a [href]="dayOneEvent.authorUrl">{{dayOneEvent.author}}</a>
+              </p>
               <p>{{dayOneEvent.description}}</p>
             </div>
           </div>
@@ -56,11 +60,15 @@
           <div class="timeline-item is-medium is-danger" *ngFor="let dayTwoEvent of dayTwoEventList">
             <div class="timeline-marker is-danger"></div>
             <div class="timeline-content">
-              <p class="heading is-1">{{dayTwoEvent.title}} | {{dayTwoEvent.dateTime | date:'shortTime'}}</p>
-              <figure class="image is-128x128">
+              <p class="heading is-1">{{dayTwoEvent.title}} | {{dayTwoEvent.dateTime | date:'shortTime'}}
+                <span *ngIf="dayTwoEvent.dateTimeEnd"> - {{dayTwoEvent.dateTimeEnd | date:'shortTime'}}</span>
+              </p>
+              <figure class="image is-128x128" *ngIf="dayTwoEvent.imgUrl">
                 <img [src]="dayTwoEvent.imgUrl" [alt]="dayTwoEvent.title">
               </figure>
-              <p class="heading is-3">{{dayTwoEvent.author}}</p>
+              <p class="heading is-3" *ngIf="dayTwoEvent.author">
+                <a [href]="dayTwoEvent.authorUrl">{{dayTwoEvent.author}}</a>
+              </p>
               <p>{{dayTwoEvent.description}}</p>
             </div>
           </div>
