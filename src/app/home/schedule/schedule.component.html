@@ -52,13 +52,14 @@
             <div class="timeline-item is-medium is-danger" *ngFor="let scheduleEvent of scheduleEvents">
               <div class="timeline-marker is-danger"></div>
               <div class="timeline-content">
-                <p class="heading is-1">{{scheduleEvent.title}} | {{scheduleEvent.dateTime | date:'shortTime'}}
+                <h4 class="title is-4">{{scheduleEvent.title}}</h4>
+                <h6 class="subtitle is-6">{{scheduleEvent.dateTime | date:'shortTime'}}
                   <span *ngIf="scheduleEvent.dateTimeEnd"> - {{scheduleEvent.dateTimeEnd | date:'shortTime'}}</span>
-                </p>
+                </h6>
                 <figure class="image is-128x128" *ngIf="scheduleEvent.imgUrl">
                   <img [src]="scheduleEvent.imgUrl" [alt]="scheduleEvent.title">
                 </figure>
-                <p class="heading is-3" *ngIf="scheduleEvent.author">
+                <p *ngIf="scheduleEvent.author">
                   <a [href]="scheduleEvent.author.profileUrl">{{scheduleEvent.author.name}}</a>
                 </p>
                 <p>{{scheduleEvent.description}}</p>
