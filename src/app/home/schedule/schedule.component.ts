@@ -1,7 +1,7 @@
 import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {ScheduleEvent} from './schedule-event';
-import {dayOneEventList, dayTwoEventList} from './schedule-event-list';
+import {scheduleEventList} from './schedule-event-list';
 
 @Component({
   selector: 'app-schedule',
@@ -11,28 +11,37 @@ import {dayOneEventList, dayTwoEventList} from './schedule-event-list';
 })
 export class ScheduleComponent implements OnInit {
   public selectedDay$: BehaviorSubject<Number>;
-  public dayOneEventList: ScheduleEvent[] = dayOneEventList;
-  public dayTwoEventList: ScheduleEvent[] = dayTwoEventList;
+  public scheduleEventList: Array<ScheduleEvent[]> = scheduleEventList;
 
   constructor() {
-    this.selectedDay$ = new BehaviorSubject<Number>(1);
+    this.selectedDay$ = new BehaviorSubject<Number>(this.getCurrentDay());
   }
 
   ngOnInit() {
   }
 
   public selectDay(selectedDay: number): void {
-    if (selectedDay >= 1 && selectedDay <= 2) {
+    if (selectedDay >= 0 && selectedDay <= 2) {
       this.selectedDay$.next(selectedDay);
     }
   }
 
   public isDaySelected(day: number): boolean {
-    if (day === this.selectedDay$.getValue()) {
-      return true;
-    }
+    return day === this.selectedDay$.getValue();
+  }
 
-    return false;
+  public getCurrentDay(): number {
+    const dateNow = new Date();
+
+    switch (dateNow.getDate()) {
+      case 25:
+        return 1;
+      case 26:
+        return 2;
+      case 24:
+      default:
+        return 0;
+    }
   }
 
 }

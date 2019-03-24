@@ -10,73 +10,53 @@
       <div class="column">
         <div class="tabs is-toggle is-fullwidth">
           <ul>
+            <li [ngClass]="{'is-active': isDaySelected(0)}">
+              <a (click)="selectDay(0)">
+                <span>Conf Day 1</span>
+              </a>
+            </li>
             <li [ngClass]="{'is-active': isDaySelected(1)}">
               <a (click)="selectDay(1)">
-                <span>Day 1</span>
+                <span>Conf Day 2</span>
               </a>
             </li>
             <li [ngClass]="{'is-active': isDaySelected(2)}">
               <a (click)="selectDay(2)">
-                <span>Day 2</span>
+                <span>Workshop Day 3</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="columns" *ngIf="isDaySelected(1)">
-      <div class="column">
-        <div class="timeline is-centered">
-          <header class="timeline-header">
-            <span class="tag is-large is-danger">Start Of Day 1</span>
-          </header>
-          <div class="timeline-item is-medium is-danger" *ngFor="let dayOneEvent of dayOneEventList">
-            <div class="timeline-marker is-danger"></div>
-            <div class="timeline-content">
-              <p class="heading is-1">{{dayOneEvent.title}} | {{dayOneEvent.dateTime | date:'shortTime'}}
-                <span *ngIf="dayOneEvent.dateTimeEnd"> - {{dayOneEvent.dateTimeEnd | date:'shortTime'}}</span>
-              </p>
-              <figure class="image is-128x128" *ngIf="dayOneEvent.imgUrl">
-                <img [src]="dayOneEvent.imgUrl" [alt]="dayOneEvent.title">
-              </figure>
-              <p class="heading is-3" *ngIf="dayOneEvent.author">
-                <a [href]="dayOneEvent.author.profileUrl">{{dayOneEvent.author.name}}</a>
-              </p>
-              <p>{{dayOneEvent.description}}</p>
+    <ng-container *ngFor="let scheduleEvents of scheduleEventList; let i = index">
+      <div class="columns" *ngIf="isDaySelected(i)">
+        <div class="column">
+          <div class="timeline is-centered">
+            <header class="timeline-header">
+              <span class="tag is-large is-danger">Start Of Day {{i + 1}}</span>
+            </header>
+            <div class="timeline-item is-medium is-danger" *ngFor="let scheduleEvent of scheduleEvents">
+              <div class="timeline-marker is-danger"></div>
+              <div class="timeline-content">
+                <p class="heading is-1">{{scheduleEvent.title}} | {{scheduleEvent.dateTime | date:'shortTime'}}
+                  <span *ngIf="scheduleEvent.dateTimeEnd"> - {{scheduleEvent.dateTimeEnd | date:'shortTime'}}</span>
+                </p>
+                <figure class="image is-128x128" *ngIf="scheduleEvent.imgUrl">
+                  <img [src]="scheduleEvent.imgUrl" [alt]="scheduleEvent.title">
+                </figure>
+                <p class="heading is-3" *ngIf="scheduleEvent.author">
+                  <a [href]="scheduleEvent.author.profileUrl">{{scheduleEvent.author.name}}</a>
+                </p>
+                <p>{{scheduleEvent.description}}</p>
+              </div>
             </div>
+            <header class="timeline-header">
+              <span class="tag is-large is-danger">End Of Day {{i + 1}}</span>
+            </header>
           </div>
-          <header class="timeline-header">
-            <span class="tag is-large is-danger">End Of Day 1</span>
-          </header>
         </div>
       </div>
-    </div>
-    <div class="columns" *ngIf="isDaySelected(2)">
-      <div class="column">
-        <div class="timeline is-centered">
-          <header class="timeline-header">
-            <span class="tag is-large is-danger">Start Of Day 2</span>
-          </header>
-          <div class="timeline-item is-medium is-danger" *ngFor="let dayTwoEvent of dayTwoEventList">
-            <div class="timeline-marker is-danger"></div>
-            <div class="timeline-content">
-              <p class="heading is-1">{{dayTwoEvent.title}} | {{dayTwoEvent.dateTime | date:'shortTime'}}
-                <span *ngIf="dayTwoEvent.dateTimeEnd"> - {{dayTwoEvent.dateTimeEnd | date:'shortTime'}}</span>
-              </p>
-              <figure class="image is-128x128" *ngIf="dayTwoEvent.imgUrl">
-                <img [src]="dayTwoEvent.imgUrl" [alt]="dayTwoEvent.title">
-              </figure>
-              <p class="heading is-3" *ngIf="dayTwoEvent.author">
-                <a [href]="dayTwoEvent.author.profileUrl">{{dayTwoEvent.author.name}}</a>
-              </p>
-              <p>{{dayTwoEvent.description}}</p>
-            </div>
-          </div>
-          <header class="timeline-header">
-            <span class="tag is-large is-danger">End Of Day 2</span>
-          </header>
-        </div>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </section>
