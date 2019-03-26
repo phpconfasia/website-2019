@@ -93,8 +93,8 @@
         <h3 class="title is-3">Gold</h3>
       </div>
     </div>
-    <div class="columns" *ngFor="let goldSponsor of sponsorList['gold']">
-      <div class="column">
+    <div class="columns is-mobile is-centered" *ngFor="let goldSponsor of sponsorList['gold']">
+      <div class="column is-6">
         <div class="card">
           <div class="card-image">
             <figure class="image">
@@ -116,8 +116,8 @@
         <h3 class="title is-3">Silver</h3>
       </div>
     </div>
-    <div class="columns" *ngFor="let silverSponsor of sponsorList['silver']">
-      <div class="column">
+    <div class="columns is-mobile is-centered" *ngFor="let silverSponsor of sponsorList['silver']">
+      <div class="column is-4">
         <div class="card">
           <div class="card-image">
             <figure class="image">
@@ -136,8 +136,8 @@
         <h3 class="title is-3">Supporter</h3>
       </div>
     </div>
-    <div class="columns" *ngFor="let supporterSponsor of sponsorList['supporter']">
-      <div class="column">
+    <div class="columns is-mobile is-centered" *ngFor="let supporterSponsor of sponsorList['supporter']">
+      <div class="column is-4">
         <div class="card">
           <div class="card-image">
             <figure class="image">
@@ -147,6 +147,26 @@
           <div class="card-content">
             <p class="title is-4">{{supporterSponsor.name}}</p>
             <p class="subtitle is-6">{{supporterSponsor.sponsorTitle}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns" *ngIf="sponsorList['community'].length">
+      <div class="column">
+        <h3 class="title is-3">Community</h3>
+      </div>
+    </div>
+    <div class="columns is-mobile is-centered" *ngFor="let communitySponsor of sponsorList['community']">
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img [src]="communitySponsor.imgUrl" [alt]="communitySponsor.name"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">{{communitySponsor.name}}</p>
+            <p class="subtitle is-6">{{communitySponsor.sponsorTitle}}</p>
           </div>
         </div>
       </div>
