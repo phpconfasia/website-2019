@@ -32,12 +32,12 @@ export class ScheduleComponent implements OnInit {
   }
 
   public getCurrentDay(): number {
-    switch (this.dateNow.getDate()) {
-      case 25:
+    switch (this.dateNow.getDate() + "0" + this.dateNow.getMonth()) {
+      case "2506":
         return 1;
-      case 26:
+      case "2606":
         return 2;
-      case 24:
+      case "2406":
       default:
         return 0;
     }
