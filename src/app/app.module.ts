@@ -9,7 +9,7 @@ import {SponsorsComponent} from './sponsors/sponsors.component';
 import {CodeOfConductComponent} from './code-of-conduct/code-of-conduct.component';
 import {VenueComponent} from './venue/venue.component';
 import {OrganizersComponent} from './organizers/organizers.component';
-import {ScheduleComponent} from './home/schedule/schedule.component';
+import {ScheduleComponent} from './schedule/schedule.component';
 
 @NgModule({
   declarations: [
