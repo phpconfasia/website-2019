@@ -5,11 +5,18 @@ export const sponsorList: { [rank: string]: Sponsor[] } = {
   'silver': [
     {
       name: 'Microsoft Singapore',
-      description: '',
       sponsorTitle: 'Venue Sponsor',
-      imgUrl: '/assets/img/sponsoring-companies/microsoft.png'
+      imgUrl: '/assets/img/sponsoring-companies/microsoft.png',
+      websiteUrl: 'https://www.microsoft.com/'
     }
   ],
   'supporter': [],
-  'community': []
+  'community': [
+    {
+      name: 'Beach Casts',
+      sponsorTitle: 'Community Partner',
+      imgUrl: '/assets/img/sponsoring-companies/beachcasts.jpg',
+      websiteUrl: 'https://beachcasts.com/'
+    }
+  ]
 };

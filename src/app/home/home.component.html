@@ -102,7 +102,8 @@
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-4">{{goldSponsor.name}}</p>
+            <p class="title is-4"><a [href]="goldSponsor.websiteUrl" rel="noreferrer noopener">{{goldSponsor.name}}</a>
+            </p>
             <p class="subtitle is-6">{{goldSponsor.sponsorTitle}}</p>
             <div class="content">
               {{goldSponsor.description}}
@@ -125,7 +126,8 @@
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-4">{{silverSponsor.name}}</p>
+            <p class="title is-4"><a [href]="silverSponsor.websiteUrl"
+                                     rel="noreferrer noopener">{{silverSponsor.name}}</a></p>
             <p class="subtitle is-6">{{silverSponsor.sponsorTitle}}</p>
           </div>
         </div>
@@ -145,7 +147,8 @@
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-4">{{supporterSponsor.name}}</p>
+            <p class="title is-4"><a [href]="supporterSponsor.websiteUrl"
+                                     rel="noreferrer noopener">{{supporterSponsor.name}}</a></p>
             <p class="subtitle is-6">{{supporterSponsor.sponsorTitle}}</p>
           </div>
         </div>
@@ -165,7 +168,8 @@
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-4">{{communitySponsor.name}}</p>
+            <p class="title is-4"><a [href]="communitySponsor.websiteUrl"
+                                     rel="noreferrer noopener">{{communitySponsor.name}}</a></p>
             <p class="subtitle is-6">{{communitySponsor.sponsorTitle}}</p>
           </div>
         </div>
