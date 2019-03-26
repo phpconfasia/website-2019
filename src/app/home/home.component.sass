@@ -7,9 +7,11 @@
   background-color: #affffd
   position: relative
   color: $white
+
   #intro-characters
     width: 100%
-    font-size: 0 // display inline-block issue
+    font-size: 0
+    // display inline-block issue
     .character-info
       padding: 0
       display: inline-block
@@ -18,25 +20,31 @@
       background-position: center center
       background-size: cover
       background-repeat: no-repeat
+
       img
         max-width: 75%
         height: 75vh
         margin-top: 25vh
+
   #intro-info
     width: 100%
     z-index: 10
     position: absolute
     left: 0
     top: 0
+
     #intro-main
       padding-top: 20vh
+
       .title
         color: $white
         background-color: $red
         display: inline-block
         padding: 10px
+
     #intro-sub
       padding-top: 30vh
+
       #intro-sub-wrapper
         min-width: 40%
         max-width: 100%
@@ -51,22 +59,29 @@
   width: 100%
   min-height: 512px
   margin: 0
+
   .columns
     margin: 0
     padding: 0
+
     .column
       margin: 0
+
   #framework-display
     background-position: center center
     background-size: cover
     background-repeat: no-repeat
+
     img
       max-height: 576px
+
   #framework-selector
     padding: 20px
     background-color: $dark
+
     h2, h3, p
       color: $white
+
     a
       img.character-avatar
         transition-property: background-color
@@ -74,9 +89,25 @@
         background-color: $grey-dark
         padding: 10px
         height: 128px
+
     a:hover
       img.character-avatar
         background-color: $white
+
+#sponsors
+  .card
+    transition-duration: 86ms
+    transition-property: box-shadow, transform, -webkit-transform
+    will-change: box-shadow, transform
+
+    .card-content
+      .title
+        padding-top: 30px
+
+  .card:hover
+    box-shadow: 0 3rem 3rem -1.25rem rgba(10, 10, 10, .1)
+    -webkit-transform: translateY(-.5rem)
+    transform: translateY(-.5rem)
 
 +tablet-only
   #intro
@@ -84,6 +115,7 @@
       .character-info
         min-height: 50vh
         width: 50%
+
         img
           margin-top: 8vh
           height: 40vh
@@ -94,12 +126,15 @@
       .character-info
         min-height: 50vh
         width: 100%
+
         img
           margin-top: 20vh
           height: 30vh
+
     #intro-sub
       #intro-buttons
         .is-danger
           float: none
+
         .is-link
           float: none
