@@ -10,7 +10,14 @@ export const sponsorList: { [rank: string]: Sponsor[] } = {
       websiteUrl: 'https://www.microsoft.com/'
     }
   ],
-  'supporter': [],
+  'supporter': [
+    {
+      name: 'Nexmo',
+      sponsorTitle: 'Coffee Sponsor',
+      imgUrl: '/assets/img/sponsoring-companies/nexmo.svg',
+      websiteUrl: 'https://nexmo.com/'
+    }
+  ],
   'community': [
     {
       name: 'Beach Casts',
