@@ -4,6 +4,7 @@ import {SponsorsComponent} from './sponsors/sponsors.component';
 import {CodeOfConductComponent} from './code-of-conduct/code-of-conduct.component';
 import {VenueComponent} from './venue/venue.component';
 import {OrganizersComponent} from './organizers/organizers.component';
+import {ScheduleComponent} from './schedule/schedule.component';
 
 export const routes: Routes = [
   {
@@ -44,6 +45,14 @@ export const routes: Routes = [
     component: OrganizersComponent,
     data: {
       title: 'Organizers | PHPConfAsia 2019',
+      description: 'Welcome to PHPConfAsia 2019! Our theme for this year is Framework Wars!'
+    }
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
+    data: {
+      title: 'Schedule | PHPConfAsia 2019',
       description: 'Welcome to PHPConfAsia 2019! Our theme for this year is Framework Wars!'
     }
   }
