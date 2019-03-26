@@ -178,5 +178,33 @@ export const scheduleEventList: Array<ScheduleEvent[]> = [
       dateTime: new Date(2019, 5, 25, 16, 20),
       dateTimeEnd: new Date(2019, 5, 25, 17, 20)
     }
+  ],
+  [
+    {
+      title: 'Registration',
+      description: 'Doors are open and registration is ready!',
+      dateTime: new Date(2019, 5, 26, 8, 45),
+      dateTimeEnd: new Date(2019, 5, 26, 9, 30)
+    },
+    {
+      title: 'Behat',
+      author: authorList[11],
+      description: '',
+      dateTime: new Date(2019, 5, 26, 9, 30),
+      dateTimeEnd: new Date(2019, 5, 26, 12, 30)
+    },
+    {
+      title: 'Lunch',
+      description: '',
+      dateTime: new Date(2019, 5, 26, 12, 30),
+      dateTimeEnd: new Date(2019, 5, 26, 14, 0)
+    },
+    {
+      title: 'Zend Expressive',
+      author: authorList[2],
+      description: '',
+      dateTime: new Date(2019, 5, 26, 14, 0),
+      dateTimeEnd: new Date(2019, 5, 26, 17, 0)
+    },
   ]
 ];
