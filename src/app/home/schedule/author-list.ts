@@ -19,11 +19,11 @@ export const authorList: Author[] = [
   },
   {
     name: 'Piti Champeethong',
-    profileUrl: ''
+    profileUrl: 'https://twitter.com/ninefyi'
   },
   {
     name: 'Achmad Fatoni',
-    profileUrl: ''
+    profileUrl: 'https://twitter.com/achmadfatoniii'
   },
   {
     name: 'Kamil Kokot',
@@ -31,7 +31,7 @@ export const authorList: Author[] = [
   },
   {
     name: 'Lionel Yeo',
-    profileUrl: ''
+    profileUrl: 'https://www.wesvault.com'
   },
   {
     name: 'Drishti Jain',
@@ -39,7 +39,7 @@ export const authorList: Author[] = [
   },
   {
     name: 'Darsono',
-    profileUrl: ''
+    profileUrl: 'https://twitter.com/darsono72'
   },
   {
     name: 'Dolly Aswin Harahap',
