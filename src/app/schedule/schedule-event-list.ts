@@ -133,7 +133,7 @@ export const scheduleEventList: Array<ScheduleEvent[]> = [
       dateTimeEnd: new Date(2019, 5, 25, 10, 50)
     },
     {
-      title: 'Battle of the testing frameworks: Behat versus NightwatchJS',
+      title: 'Battle of the testing frameworks: Behat versus Nightwatch JS',
       author: authorList[11],
       description: '',
       dateTime: new Date(2019, 5, 25, 10, 50),

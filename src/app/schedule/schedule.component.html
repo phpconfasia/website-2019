@@ -53,7 +53,7 @@
             <div class="timeline-item is-medium is-danger" *ngFor="let scheduleEvent of scheduleEvents">
               <div class="timeline-marker is-danger"></div>
               <div class="timeline-content">
-                <h4 class="title is-4">{{scheduleEvent.title}}</h4>
+                <h4 class="title is-4"><small>{{scheduleEvent.title}}</small></h4>
                 <h6 class="subtitle is-6">{{scheduleEvent.dateTime | date:'shortTime'}}
                   <span *ngIf="scheduleEvent.dateTimeEnd"> - {{scheduleEvent.dateTimeEnd | date:'shortTime'}}</span>
                 </h6>
