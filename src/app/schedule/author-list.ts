@@ -60,5 +60,9 @@ export const authorList: Author[] = [
   {
     name: 'Uncle Cal',
     profileUrl: 'https://twitter.com/CalEvans'
+  },
+  {
+    name: 'Meetup Page',
+    profileUrl: 'https://meetup.com/sgphpug'
   }
 ];

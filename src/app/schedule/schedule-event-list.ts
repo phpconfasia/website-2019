@@ -96,6 +96,13 @@ export const scheduleEventList: Array<ScheduleEvent[]> = [
       description: 'A summary speech to mark the end of day 1 and also to thank our sponsors.',
       dateTime: new Date(2019, 5, 24, 17, 0),
       dateTimeEnd: new Date(2019, 5, 24, 17, 15)
+    },
+    {
+      title: 'Singapore PHP Community Combined Meetup 2019',
+      author: authorList[15],
+      description: 'Upsized version of our monthly local meetup.',
+      dateTime: new Date(2019, 5, 24, 19, 0),
+      dateTimeEnd: new Date(2019, 5, 24, 21, 0)
     }
   ],
   [
@@ -177,6 +184,12 @@ export const scheduleEventList: Array<ScheduleEvent[]> = [
       description: '',
       dateTime: new Date(2019, 5, 25, 16, 20),
       dateTimeEnd: new Date(2019, 5, 25, 17, 20)
+    },
+    {
+      title: 'After Party',
+      description: 'What\'s a conference without an after party?',
+      dateTime: new Date(2019, 5, 25, 19, 0),
+      dateTimeEnd: new Date(2019, 5, 25, 21, 0)
     }
   ],
   [
