@@ -26,17 +26,17 @@
           <ul>
             <li [ngClass]="{'is-active': isDaySelected(0)}">
               <a (click)="selectDay(0)">
-                <span class="has-text-centered">Conference<br>Day 1<br>24 June</span>
+                <span class="has-text-centered">{{dayList[0].type}}<br>{{dayList[0].daySequence}}<br>{{dayList[0].date}}</span>
               </a>
             </li>
             <li [ngClass]="{'is-active': isDaySelected(1)}">
               <a (click)="selectDay(1)">
-                <span class="has-text-centered">Conference<br>Day 2<br>25 June</span>
+                <span class="has-text-centered">{{dayList[1].type}}<br>{{dayList[1].daySequence}}<br>{{dayList[1].date}}</span>
               </a>
             </li>
             <li [ngClass]="{'is-active': isDaySelected(2)}">
               <a (click)="selectDay(2)">
-                <span class="has-text-centered">Workshop<br>Day<br>26 June</span>
+                <span class="has-text-centered">{{dayList[2].type}}<br>{{dayList[2].daySequence}}<br>{{dayList[2].date}}</span>
               </a>
             </li>
           </ul>
@@ -46,6 +46,7 @@
     <ng-container *ngFor="let scheduleEvents of scheduleEventList; let i = index">
       <div class="columns" *ngIf="isDaySelected(i)">
         <div class="column">
+          <div class="has-text-centered"><h4 class="subtitle"><em>{{dayList[i].address}}</em><br><br></h4></div>
           <div class="timeline is-centered">
             <header class="timeline-header">
               <span class="tag is-large is-danger">Start Of Day {{i + 1}}</span>

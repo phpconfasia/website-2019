@@ -2,6 +2,8 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {BehaviorSubject, Observable, Observer} from 'rxjs';
 import {ScheduleEvent} from './schedule-event';
 import {scheduleEventList} from './schedule-event-list';
+import {Day} from './day';
+import {dayList} from './day-list';
 
 @Component({
   selector: 'app-schedule',
@@ -12,6 +14,7 @@ import {scheduleEventList} from './schedule-event-list';
 export class ScheduleComponent implements OnInit {
   public selectedDay$: BehaviorSubject<Number>;
   public scheduleEventList: Array<ScheduleEvent[]> = scheduleEventList;
+  public dayList: Day[] = dayList;
   public dateNow: Date = new Date();
 
   constructor() {
