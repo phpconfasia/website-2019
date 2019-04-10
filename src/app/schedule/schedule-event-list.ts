@@ -179,7 +179,7 @@ export const scheduleEventList: Array<ScheduleEvent[]> = [
       dateTimeEnd: new Date(2019, 5, 25, 16, 10)
     },
     {
-      title: 'Closing Keynote: Groupies, Roadies, Rockstars',
+      title: 'To Be Confirmed',
       author: authorList[14],
       description: '',
       dateTime: new Date(2019, 5, 25, 16, 20),
