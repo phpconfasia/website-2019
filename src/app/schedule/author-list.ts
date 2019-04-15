@@ -55,11 +55,11 @@ export const authorList: Author[] = [
   },
   {
     name: 'Moses Liao',
-    profileUrl: ''
+    profileUrl: 'https://medium.com/@mosesliao'
   },
   {
-    name: 'To Be Confirmed',
-    profileUrl: ''
+    name: 'Gustavo Ocanto',
+    profileUrl: 'https://twitter.com/gocanto'
   },
   {
     name: 'Meetup Page',
