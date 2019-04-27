@@ -3,31 +3,38 @@ import {Author} from './author';
 export const authorList: Author[] = [
   {
     name: 'Michael Cheng',
-    profileUrl: 'https://twitter.com/coderkungfu'
+    profileUrl: 'https://twitter.com/coderkungfu',
+    imgUrl: '/assets/img/organizers/michael-cheng.jpg'
   },
   {
     name: 'Nara Kasbergen',
-    profileUrl: 'https://twitter.com/xiehan'
+    profileUrl: 'https://twitter.com/xiehan',
+    imgUrl: '/assets/img/speakers/nara-kasbergen.jpg'
   },
   {
     name: 'Adam Culp',
-    profileUrl: 'https://twitter.com/adamculp'
+    profileUrl: 'https://twitter.com/adamculp',
+    imgUrl: '/assets/img/speakers/adam-culp.jpg'
   },
   {
     name: 'Ben Dechrai',
-    profileUrl: 'https://twitter.com/bendechrai'
+    profileUrl: 'https://twitter.com/bendechrai',
+    imgUrl: '/assets/img/speakers/ben-dekrai.jpg'
   },
   {
     name: 'Piti Champeethong',
-    profileUrl: 'https://twitter.com/ninefyi'
+    profileUrl: 'https://twitter.com/ninefyi',
+    imgUrl: '/assets/img/speakers/piti-champeethong.jpg'
   },
   {
     name: 'Achmad Fatoni',
-    profileUrl: 'https://twitter.com/achmadfatoniii'
+    profileUrl: 'https://twitter.com/achmadfatoniii',
+    imgUrl: '/assets/img/speakers/achmad-fatoni.jpg'
   },
   {
     name: 'Kamil Kokot',
-    profileUrl: 'https://twitter.com/pamilme'
+    profileUrl: 'https://twitter.com/pamilme',
+    imgUrl: '/assets/img/speakers/kamil-kokot.jpg'
   },
   {
     name: 'Lionel Yeo',
@@ -35,15 +42,18 @@ export const authorList: Author[] = [
   },
   {
     name: 'Drishti Jain',
-    profileUrl: 'https://twitter.com/drishtijjain'
+    profileUrl: 'https://twitter.com/drishtijjain',
+    imgUrl: '/assets/img/speakers/drishti-jain.jpg'
   },
   {
     name: 'Darsono',
-    profileUrl: 'https://twitter.com/darsono72'
+    profileUrl: 'https://twitter.com/darsono72',
+    imgUrl: '/assets/img/speakers/darsono.jpg'
   },
   {
     name: 'Dolly Aswin Harahap',
-    profileUrl: 'https://twitter.com/dollyaswin'
+    profileUrl: 'https://twitter.com/dollyaswin',
+    imgUrl: '/assets/img/speakers/dolly-aswin.jpg'
   },
   {
     name: 'Vladimir Roudakov & Janna Malikova',
@@ -51,7 +61,8 @@ export const authorList: Author[] = [
   },
   {
     name: 'Kat Zień',
-    profileUrl: 'https://twitter.com/kasiazien'
+    profileUrl: 'https://twitter.com/kasiazien',
+    imgUrl: '/assets/img/speakers/kat-zien.jpg'
   },
   {
     name: 'Moses Liao',
@@ -59,7 +70,8 @@ export const authorList: Author[] = [
   },
   {
     name: 'Gustavo Ocanto',
-    profileUrl: 'https://twitter.com/gocanto'
+    profileUrl: 'https://twitter.com/gocanto',
+    imgUrl: '/assets/img/speakers/gustavo.jpg'
   },
   {
     name: 'Meetup Page',
