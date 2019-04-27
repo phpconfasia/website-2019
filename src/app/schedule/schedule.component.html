@@ -54,17 +54,21 @@
             <div class="timeline-item is-medium is-danger" *ngFor="let scheduleEvent of scheduleEvents">
               <div class="timeline-marker is-danger"></div>
               <div class="timeline-content">
-                <h4 class="title is-4"><small>{{scheduleEvent.title}}</small></h4>
-                <h6 class="subtitle is-6">{{scheduleEvent.dateTime | date:'shortTime'}}
-                  <span *ngIf="scheduleEvent.dateTimeEnd"> - {{scheduleEvent.dateTimeEnd | date:'shortTime'}}</span>
-                </h6>
-                <figure class="image is-128x128" *ngIf="scheduleEvent.imgUrl">
-                  <img [src]="scheduleEvent.imgUrl" [alt]="scheduleEvent.title">
-                </figure>
-                <p *ngIf="scheduleEvent.author">
-                  <a [href]="scheduleEvent.author.profileUrl">{{scheduleEvent.author.name}}</a>
-                </p>
-                <p>{{scheduleEvent.description}}</p>
+                <div class="card">
+                  <div class="card-content">
+                    <h4 class="title is-4">
+                      <small>{{scheduleEvent.title}}</small>
+                    </h4>
+                    <h6 class="subtitle is-6">{{scheduleEvent.dateTime | date:'shortTime'}}
+                      <span *ngIf="scheduleEvent.dateTimeEnd"> - {{scheduleEvent.dateTimeEnd | date:'shortTime'}}</span>
+                    </h6>
+                    <img [src]="scheduleEvent.author.imgUrl" [alt]="scheduleEvent.author.name" *ngIf="scheduleEvent.author && scheduleEvent.author.imgUrl">
+                    <p *ngIf="scheduleEvent.author">
+                      <a [href]="scheduleEvent.author.profileUrl">{{scheduleEvent.author.name}}</a>
+                    </p>
+                    <p>{{scheduleEvent.description}}</p>
+                  </div>
+                </div>
               </div>
             </div>
             <header class="timeline-header">
