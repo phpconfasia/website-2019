@@ -57,7 +57,8 @@ export const authorList: Author[] = [
   },
   {
     name: 'Vladimir Roudakov & Janna Malikova',
-    profileUrl: 'https://tomato-elephant-studio.com'
+    profileUrl: 'https://tomato-elephant-studio.com',
+    imgUrl: '/assets/img/speakers/vladimir-roudakov.jpg'
   },
   {
     name: 'Kat Zień',
